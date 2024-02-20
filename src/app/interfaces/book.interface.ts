@@ -11,4 +11,5 @@ export interface Book {
   subject: string;
   tag: string;
   visibility: number;
+  gender:string;
 }

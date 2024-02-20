@@ -2,6 +2,7 @@
 import { Injectable } from '@angular/core';
 import { AuthorOfTheWeek } from '../../interfaces/author-of-the-week.interface';
 import { Book } from '../../interfaces/book.interface';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -29,7 +30,7 @@ export class ExampledataService {
   // Method to fetch example data for books
   getExampleBooks(): Book[] {
     // Mock data for example books
-     const books: Book[] = [
+    const books: Book[] = [
       {
         pic: 'assets/images/gallery/chair.jpg',
         name: 'One Hundred Years of Solitude',
@@ -39,7 +40,8 @@ export class ExampledataService {
         description: 'One Hundred Years of Solitude is a landmark 1967 novel by Colombian author Gabriel García Márquez...',
         subject: 'Magical Realism',
         tag: 'Latin American Literature',
-        visibility: 1
+        visibility: 1,
+        gender: 'Romance' // Added gender property
       },
       {
         pic: 'assets/images/gallery/chair2.jpg',
@@ -50,7 +52,8 @@ export class ExampledataService {
         description: 'Love in the Time of Cholera is a novel by Colombian Nobel prize winning author Gabriel García Márquez...',
         subject: 'Romance',
         tag: 'Latin American Literature',
-        visibility: 1
+        visibility: 1,
+        gender: 'Romance' // Added gender property
       },
       {
         pic: 'assets/images/gallery/chair3.jpg',
@@ -61,7 +64,8 @@ export class ExampledataService {
         description: 'Chronicle of a Death Foretold is a novella by Colombian author Gabriel García Márquez...',
         subject: 'Literary Fiction',
         tag: 'Latin American Literature',
-        visibility: 1
+        visibility: 1,
+        gender: 'History' // Added gender property
       },
       {
         pic: 'assets/images/gallery/chair4.jpg',
@@ -72,8 +76,22 @@ export class ExampledataService {
         description: 'Memories of My Melancholy Whores is a novella by Colombian author Gabriel García Márquez...',
         subject: 'Romance',
         tag: 'Latin American Literature',
-        visibility: 1
-      }
+        visibility: 1,
+        gender: 'Romance' // Added gender property
+      },
+      // Repeat the existing books to reach 30 books
+      ...Array.from({ length: 26 }, (_, index) => ({
+        pic: books[index % 4].pic,
+        name: books[index % 4].name,
+        link: `/book/${index + 5}`,
+        rate: books[index % 4].rate,
+        author: books[index % 4].author,
+        description: books[index % 4].description,
+        subject: books[index % 4].subject,
+        tag: books[index % 4].tag,
+        visibility: books[index % 4].visibility,
+        gender: books[index % 4].gender
+      }))
     ];
 
     return books;

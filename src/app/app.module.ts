@@ -7,7 +7,6 @@ import { PagesComponent } from './pages/pages.component';
 import { LoginComponent } from './auth/login/login.component';
 import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { HeaderComponent } from './shared/header/header.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { PagesModule } from './pages/pages.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,7 +18,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     BreadcrumbsComponent,
     SidebarComponent,
-    HeaderComponent,
     RegisterComponent
   ],
   imports: [

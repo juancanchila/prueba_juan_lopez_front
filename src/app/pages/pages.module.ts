@@ -7,6 +7,7 @@ import { SliderComponent } from './front/slider/slider.component';
 import { SidebarComponent } from './front/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { MainComponent } from './front/main/main.component';
+import { HeaderComponent } from '../shared/header/header.component';
 
 
 
@@ -17,7 +18,8 @@ import { MainComponent } from './front/main/main.component';
     HomeComponent,
     SliderComponent,
     SidebarComponent,
-    MainComponent
+    MainComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
