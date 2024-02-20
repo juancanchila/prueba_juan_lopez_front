@@ -6,6 +6,7 @@ import { HomeComponent } from './front/home/home.component';
 import { SliderComponent } from './front/slider/slider.component';
 import { SidebarComponent } from './front/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+import { MainComponent } from './front/main/main.component';
 
 
 
@@ -15,11 +16,16 @@ import { RouterModule } from '@angular/router';
     DashboardComponent,
     HomeComponent,
     SliderComponent,
-    SidebarComponent
+    SidebarComponent,
+    MainComponent
   ],
   imports: [
     CommonModule,
     RouterModule
+
+  ],
+  exports: [
+    SliderComponent // Export SliderComponent to make it available outside this module
   ]
 })
 export class PagesModule { }

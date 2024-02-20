@@ -1,17 +1,38 @@
 <!-- slider.component.html -->
 <div class="slider">
-    <h2>Books Slider</h2>
-    <div class="slider-container" [@slideInOut]="slideState">
+    <div class="slider-container"  [@fadeInOut]="fadeState">
       <ul>
         <li *ngFor="let book of books" class="book-item">
-          <img src="{{ book.pic }}" alt="Book Cover" class="book-img">
+          <div class="book-cover">
+            <img src="{{ book.pic }}" alt="Book Cover" class="book-img">
+          </div>
           <div class="book-details">
             <a [routerLink]="book.link" class="book-name">{{ book.name }}</a>
             <p class="author-name">by {{ book.author.name }}</p>
-            <!-- Additional book details can be displayed here -->
+            <div class="rating">
+                <ng-container *ngFor="let star of getStars(book.rate)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path *ngIf="star" d="M12 2l4.09 8.372L22 9.382l-7.455 6.25L17.818 22 12 18.052 6.182 22l1.273-6.368L2 9.382l5.91 1.99z"/>
+                    <path *ngIf="!star" d="M19.364 8.294l-5.202-.795L12.029 2 9.837 7.499l-5.202.795 3.75 3.65-.885 5.151 4.616-2.434 4.612 2.434-.885-5.151z"/>
+                  </svg>
+                </ng-container>
+              </div>
+            <p>{{ book.description }}</p>
           </div>
         </li>
       </ul>
     </div>
-    <button (click)="moveRight()" class="arrow">➡️</button>
+    <div class="button-wrapper">
+        <button (click)="moveLeft()" class="arrow button-left">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"/>
+            </svg>
+        </button>
+        <button (click)="moveRight()" class="arrow button-right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/>
+            </svg>
+        </button>
+    </div>
   </div>
