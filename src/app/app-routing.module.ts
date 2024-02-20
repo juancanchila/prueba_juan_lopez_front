@@ -5,6 +5,7 @@ import { PagesRoutingModule } from './pages/pages-routing.module'; // Import Pag
 // Import other modules or components if needed
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to '/home' for the root path
   // Define other routes if needed
 ];
 
