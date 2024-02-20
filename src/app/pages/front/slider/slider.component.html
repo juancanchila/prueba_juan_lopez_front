@@ -1,1 +1,17 @@
-<p>slider works!</p>
+<!-- slider.component.html -->
+<div class="slider">
+    <h2>Books Slider</h2>
+    <div class="slider-container" [@slideInOut]="slideState">
+      <ul>
+        <li *ngFor="let book of books" class="book-item">
+          <img src="{{ book.pic }}" alt="Book Cover" class="book-img">
+          <div class="book-details">
+            <a [routerLink]="book.link" class="book-name">{{ book.name }}</a>
+            <p class="author-name">by {{ book.author.name }}</p>
+            <!-- Additional book details can be displayed here -->
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button (click)="moveRight()" class="arrow">➡️</button>
+  </div>

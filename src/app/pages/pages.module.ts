@@ -4,6 +4,8 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { NopagefoundComponent } from './component/nopagefound/nopagefound.component';
 import { HomeComponent } from './front/home/home.component';
 import { SliderComponent } from './front/slider/slider.component';
+import { SidebarComponent } from './front/sidebar/sidebar.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,10 +14,12 @@ import { SliderComponent } from './front/slider/slider.component';
     NopagefoundComponent,
     DashboardComponent,
     HomeComponent,
-    SliderComponent
+    SliderComponent,
+    SidebarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class PagesModule { }

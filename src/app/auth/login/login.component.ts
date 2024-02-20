@@ -7,7 +7,7 @@ import { User } from '../../interfaces/user.interface'; // Import User interface
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
 

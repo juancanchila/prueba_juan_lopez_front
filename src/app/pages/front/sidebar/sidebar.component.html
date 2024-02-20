@@ -1,0 +1,11 @@
+<!-- sidebar.component.html -->
+<div class="sidebar">
+    <h2>Authors of the Week</h2>
+    <ul>
+      <li *ngFor="let author of authors" class="author-item">
+        <img src="{{ author.profilePic }}" alt="Profile Picture" class="author-img">
+        <!-- Turn the name into a link -->
+        <a [routerLink]="author.profileLink" class="author-name">{{ author.name }}</a>
+      </li>
+    </ul>
+  </div>
