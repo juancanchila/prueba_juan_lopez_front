@@ -1,0 +1,51 @@
+/* main.component.scss */
+/* Styling for tabs */
+.tabs {
+    margin-top: 20px; /* Adjust as needed */
+  }
+
+  /* Styling for tab headers */
+  .nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .nav-link {
+    color: #495057;
+  }
+
+  .nav-link.active {
+    color: #007bff;
+    border-color: #007bff;
+  }
+
+  /* Styling for tab content */
+  .tab-content {
+    padding: 20px; /* Adjust as needed */
+  }
+
+  .tab-pane {
+    display: none;
+  }
+
+  .tab-pane.active {
+    display: block;
+  }
+
+  /* Styling for cards */
+  .card {
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .card-text {
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+
+  .card-img-top {
+    max-width: 100%;
+    height: auto;
+  }

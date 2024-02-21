@@ -28,7 +28,8 @@ export class SliderComponent implements OnInit {
   constructor(private exampleDataService: ExampledataService) { }
 
   ngOnInit(): void {
-   // this.books = this.exampleDataService.getExampleBooks();
+    this.books = this.exampleDataService.getExampleBooks();
+
   }
   /*
   moveRight(): void {

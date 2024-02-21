@@ -1,5 +1,8 @@
 <!-- sidebar.component.html -->
 <div class="sidebar">
+
+  <div>
+
     <h2>Authors of the Week</h2>
     <ul>
       <li *ngFor="let author of authors" class="author-item">
@@ -8,4 +11,17 @@
         <a [routerLink]="author.profileLink" class="author-name">{{ author.name }}</a>
       </li>
     </ul>
+
+  </div>
+
+  <div>
+    <h2>Books of the Year</h2>
+    <li *ngFor="let book of books" class="book-item">
+      <img src="{{ book.pic }}" alt="Pic" class="book-img">
+      <!-- Turn the name into a link -->
+      <a [routerLink]="book.link" class="author-name">{{ book.name }}</a>
+    </li>
+
+  </div>
+
   </div>

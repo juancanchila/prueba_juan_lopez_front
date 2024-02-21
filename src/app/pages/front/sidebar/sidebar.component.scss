@@ -20,3 +20,22 @@
   .author-name {
     font-size: 14px;
   }
+  .book-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Style the book image */
+  .book-img {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    border-radius: 5px; /* Apply border radius for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Apply shadow effect */
+    margin-right: 10px;
+  }
+
+  /* Style the book name link */
+  .book-name {
+    font-size: 14px;
+  }

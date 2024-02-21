@@ -78,24 +78,31 @@ export class ExampledataService {
         tag: 'Latin American Literature',
         visibility: 1,
         gender: 'Romance' // Added gender property
-      },
-      // Repeat the existing books to reach 30 books
-      ...Array.from({ length: 26 }, (_, index) => ({
-        pic: books[index % 4].pic,
-        name: books[index % 4].name,
-        link: `/book/${index + 5}`,
-        rate: books[index % 4].rate,
-        author: books[index % 4].author,
-        description: books[index % 4].description,
-        subject: books[index % 4].subject,
-        tag: books[index % 4].tag,
-        visibility: books[index % 4].visibility,
-        gender: books[index % 4].gender
-      }))
+      }
+
     ];
 
     return books;
   }
 
-  // Add more methods for different types of example data as needed
+  getGenders(): string[] {
+    const books = this.getExampleBooks();
+    const genders: string[] = [];
+
+    books.forEach(book => {
+      if (!genders.includes(book.gender)) {
+        genders.push(book.gender);
+      }
+    });
+
+    return genders;
+  }
+
+
+  getBooksByGender(gender: string): Book[] {
+    const books = this.getExampleBooks();
+    return books.filter(book => book.gender.toLowerCase() === gender.toLowerCase());
+  }
+
+
 }
