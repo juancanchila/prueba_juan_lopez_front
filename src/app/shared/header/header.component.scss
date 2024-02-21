@@ -1,0 +1,192 @@
+/* home.component.css */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  main {
+    padding: 20px;
+  }
+/* home.component.css */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* home.component.css */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Sidebar menu */
+.sidebar_menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: rgba(200, 200, 200, 0.9); /* Semi-transparent grey background */
+    z-index: 1000; /* Higher z-index to overlay other content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+}
+
+.sidebar_menu.show {
+    left: 0; /* Visible when 'show' class is added */
+}
+
+.sidebar_menu ul {
+    padding: 20px;
+}
+
+.sidebar_menu ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.sidebar_menu ul li a {
+    text-decoration: none;
+    color: #333; /* Adjust link color */
+    font-weight: bold;
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .sidebar_menu {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Initially hidden off-screen */
+        width: 100%; /* Make the sidebar menu take up 100% of the width */
+        height: 100%;
+        background-color: rgba(200, 200, 200, 0.9); /* Semi-transparent grey background */
+        z-index: 1000; /* Higher z-index to overlay other content */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s ease;
+    }
+
+    .sidebar_menu.show {
+        left: 0; /* Visible when 'show' class is added */
+    }
+
+    .sidebar_menu ul {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .close-button {
+        top: 5px; /* Adjust close button position */
+        right: 5px;
+    }
+}

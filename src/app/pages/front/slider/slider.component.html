@@ -1,13 +1,20 @@
-<!-- slider.component.html
+<!-- slider.component.html-->
 <div class="slider">
+  <button (click)="moveLeft()" class="arrow button-wrapper button-left">
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"/>
+    </svg>
+</button>
     <div class="slider-container"  [@fadeInOut]="fadeState">
+
       <ul>
         <li *ngFor="let book of books" class="book-item">
           <div class="book-cover">
             <img src="{{ book.pic }}" alt="Book Cover" class="book-img">
           </div>
           <div class="book-details">
-            <a [routerLink]="book.link" class="book-name">{{ book.name }}</a>
+            <a href="#" class="book-name">{{ book.name }}</a>
             <p class="author-name">by {{ book.author.name }}</p>
             <div class="rating">
                 <ng-container *ngFor="let star of getStars(book.rate)">
@@ -22,18 +29,11 @@
         </li>
       </ul>
     </div>
-    <div class="button-wrapper">
-        <button (click)="moveLeft()" class="arrow button-left">
+      <button (click)="moveRight()" class="arrow button-right button-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/>
+        </svg>
+    </button>
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"/>
-            </svg>
-        </button>
-        <button (click)="moveRight()" class="arrow button-right">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/>
-            </svg>
-        </button>
-    </div>
+
   </div>
--->

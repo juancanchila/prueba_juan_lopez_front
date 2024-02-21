@@ -3,31 +3,23 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { NopagefoundComponent } from './component/nopagefound/nopagefound.component';
 import { HomeComponent } from './front/home/home.component';
-import { SliderComponent } from './front/slider/slider.component';
+import { SliderComponent } from './front/slider/slider.component'; // Import SliderComponent
 import { SidebarComponent } from './front/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { MainComponent } from './front/main/main.component';
-import { HeaderComponent } from '../shared/header/header.component';
-
-
 
 @NgModule({
   declarations: [
     NopagefoundComponent,
     DashboardComponent,
     HomeComponent,
-    SliderComponent,
+    SliderComponent, // Add SliderComponent to declarations
     SidebarComponent,
-    MainComponent,
-    HeaderComponent
+    MainComponent
   ],
   imports: [
     CommonModule,
     RouterModule
-
-  ],
-  exports: [
-    SliderComponent // Export SliderComponent to make it available outside this module
   ]
 })
 export class PagesModule { }

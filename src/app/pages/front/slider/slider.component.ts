@@ -31,7 +31,7 @@ export class SliderComponent implements OnInit {
     this.books = this.exampleDataService.getExampleBooks();
 
   }
-  /*
+
   moveRight(): void {
     // Shift the books array to the left by one item
     const firstBook = this.books.shift();
@@ -68,5 +68,5 @@ export class SliderComponent implements OnInit {
       stars.push(i < rate);
     }
     return stars;
-  }*/
+  }
 }

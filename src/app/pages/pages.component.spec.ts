@@ -11,7 +11,7 @@ describe('PagesComponent', () => {
       declarations: [PagesComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(PagesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

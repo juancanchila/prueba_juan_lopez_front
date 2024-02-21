@@ -4,5 +4,6 @@ export interface User {
     email: string;
     role: string;
     token: string;
+    profilePic: string;
     // Add any other properties you need
 }

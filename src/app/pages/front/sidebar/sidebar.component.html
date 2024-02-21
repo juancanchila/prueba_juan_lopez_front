@@ -8,19 +8,19 @@
       <li *ngFor="let author of authors" class="author-item">
         <img src="{{ author.profilePic }}" alt="Profile Picture" class="author-img">
         <!-- Turn the name into a link -->
-        <a [routerLink]="author.profileLink" class="author-name">{{ author.name }}</a>
+        <a href="#" class="author-name">{{ author.name }}</a>
       </li>
     </ul>
 
   </div>
 
   <div>
-    <h2>Books of the Year</h2>
-    <li *ngFor="let book of books" class="book-item">
-      <img src="{{ book.pic }}" alt="Pic" class="book-img">
-      <!-- Turn the name into a link -->
-      <a [routerLink]="book.link" class="author-name">{{ book.name }}</a>
-    </li>
+    <h2>Authors of the Week</h2>
+    <li *ngFor="let author of authors" class="author-item">
+        <img src="{{ author.profilePic }}" alt="Profile Picture" class="author-img">
+        <!-- Turn the name into a link -->
+        <a href="#" class="author-name">{{ author.name }}</a>
+      </li>
 
   </div>
 

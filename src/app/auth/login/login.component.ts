@@ -1,8 +1,6 @@
-// login.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from '../../core/services/user.service';
-import { User } from '../../interfaces/user.interface'; // Import User interface
+import { AuthService } from '../../core/services/authservice.service'; // Import your authentication service
 
 @Component({
   selector: 'app-login',
@@ -11,18 +9,13 @@ import { User } from '../../interfaces/user.interface'; // Import User interface
 })
 export class LoginComponent {
 
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   login() {
     // Implement login logic
-    const user: User = {
-      id: 1,
-      name: 'John Doe',
-      email: 'john@example.com',
-      role: 'user',
-      token: 'token123'
-    };
-    this.userService.setUser(user);
+    const username = 'admin';
+    const password = 'admin';
+    this.authService.login(username, password); // Call login method from AuthService
     this.router.navigate(['/dashboard']);
   }
 }
