@@ -28,8 +28,9 @@ export class SliderComponent implements OnInit {
   constructor(private exampleDataService: ExampledataService) { }
 
   ngOnInit(): void {
-    this.books = this.exampleDataService.getExampleBooks();
+   // this.books = this.exampleDataService.getExampleBooks();
   }
+  /*
   moveRight(): void {
     // Shift the books array to the left by one item
     const firstBook = this.books.shift();
@@ -66,5 +67,5 @@ export class SliderComponent implements OnInit {
       stars.push(i < rate);
     }
     return stars;
-  }
+  }*/
 }
