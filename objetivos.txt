@@ -1,0 +1,50 @@
+back - implenatr pruebas con jets
+implemntar base de datos - orm prisma
+hacer un backed con jsp.net solo con un auth 
+
+----------------------------
+1. devolver lista de libros
+ - los libros tinene una base de datos para las puntuaciones
+ - base de datyos para me gusta
+ - base de datos para comentarios
+ 2 - los libros con mas cmegusta en la semana son los libros de la semana
+
+3. la suma de todos los me gustas de todos los libros condiciona al autor del año
+
+
+- tabla de ususarios
+- tabla de roles 
+   - lector
+     --me gusta descargar libros
+   - autor
+    --publicar y despublicar sus libros
+    -- descargar libros
+    -- me gusta
+    -- crear blogs
+   - admin
+    -borrar ususarios
+    - desactivar sususarios
+   - una lista de libros con acciones q no hacen nada
+   - una lista de authores que no hace nada
+    - filtros
+
+-------------------------------------------------------
+en el front, autenticarse, si es ususario puede dat megusta y descargar libros
+ver su perfil la lista de lis libros a los que les dio megusta
+eliminar su cuenta
+-----------------------------------------
+author puede hacer lo mismo qe el anterior solo que puede crear un blog y crear una publicacion de un libro
+, le salen sus libros, sus megusta y puede publicar y despublicar sus libros
+-------------------------------------
+el admin, tiene la lista de ususario con acciones, la lista de libros con acciones
+-----
+
+base de datos relacional
+usar prisma
+mejorar el diseño
+
+
+los primeros ,megusta sale la imagen del autor abajo y el rate es del 1 al 10, los libros mejor rate de la semana son los de la semana y la suma de todos los rates de un author suman al author del año
+
+
+CREATE USER 'sammy'@'localhost' IDENTIFIED WITH mysql_native_password BY 'testdev004@NJ';

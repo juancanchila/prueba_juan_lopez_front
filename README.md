@@ -6,10 +6,7 @@ Link : [Link to the evincecies ](https://drive.google.com/drive/folders/109Blg4u
 1. Thaks video
 2. Presentatio Slides
 
-BackEnd: [Link to the repository ](https://github.com/juancanchila/node_back.git
-)
-
-ttps://github.com/juancanchila/node_back.git
+BackEnd: [ttps://github.com/juancanchila/node_back.git](https://github.com/juancanchila/nodeDemo.git)
 
 
 # Books App
