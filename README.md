@@ -3,8 +3,9 @@
 # Evidences
 Link : [Link to the evincecies ](https://drive.google.com/drive/folders/109Blg4ucVgnK90hhw5qFG8Dp4flR2m1X?usp=drive_link)
 
-1. Thaks video
-2. Presentatio Slides
+1. Thanks video
+2. Presentation Slides
+3. Pics for evidencies
 
 BackEnd: [ttps://github.com/juancanchila/node_back.git](https://github.com/juancanchila/nodeDemo.git)
 
